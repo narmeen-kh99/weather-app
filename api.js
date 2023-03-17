@@ -17,7 +17,7 @@ api.get("/city/:cityName", (req, res) => {
       let result = wheatherOfCity.data;
       let newRes = FilterData(result);
       console.log(newRes);
-      res.send(newRes);
+      res.send({ res: newRes });
     });
 });
 

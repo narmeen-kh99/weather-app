@@ -36,7 +36,11 @@
     <div class="container">
       <div>
         <input type="text" id="cityName-input" />
-        <button id="search" , class="waves-effect waves-light btn-large">
+        <button
+          id="search"
+          ,
+          class="waves-effect waves-light btn-large cyan darken-3"
+        >
           <i class="material-icons left">search</i>search
         </button>
       </div>
@@ -46,7 +50,7 @@
       {{#each DataRE}}
         <div class="row">
           <div class="col s12 m6 l6">
-            <div class="card blue darken-1">
+            <div class="card cyan darken-2 z-depth-5">
               <div class="card-content white-text">
                 <span class="car-title">{{name}}</span>
                 <i class="material-icons left">wb_sunny</i>
@@ -59,7 +63,7 @@
                 ><i class="material-icons">add</i></a>
                 <a
                   id="delete"
-                  class="btn-floating btn-large waves-effect waves-light btn blue"
+                  class="btn-floating btn-large waves-effect waves-light btn cyan accent-4"
                 ><i class="material-icons">remove</i></a>
               </div>
             </div>

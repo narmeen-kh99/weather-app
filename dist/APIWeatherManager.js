@@ -10,15 +10,17 @@ class APIManager {
     console.log("i am here 1");
     return $.get(`http://localhost:4200/city`).then((result) => {
       console.log(result);
-      this.data.push(result);
+      this.SaveDataArray(result);
+      console.log(this.data);
       render.RenderWeatherData(result);
     });
   }
   getCityWeather() {
+    this.inputCityName();
     return $.get(`http://localhost:4200/city/${this.cityName}`).then(
       (result) => {
-        this.data.push(result);
-        render.RenderWeatherData(result);
+        this.data.push(result.res);
+        render.RenderWeatherData(this.data);
       }
     );
   }
@@ -40,4 +42,11 @@ class APIManager {
       }
     );
   }
+
+  SaveDataArray = function (arr) {
+    for (let city of arr) {
+      this.data.push(city);
+    }
+    return true;
+  };
 }
