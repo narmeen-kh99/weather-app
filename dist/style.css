@@ -1,0 +1,39 @@
+body {
+  background-color: #71c89c;
+  font-family: "Nunito", sans-serif;
+}
+
+.cities {
+  display: block;
+  background-color: #b2e1c3;
+  width: 1000px;
+  height: 400px;
+  margin: 5px;
+  order: 3;
+  padding: 20px;
+  align-content: center;
+  box-shadow: 1px 1px 5px #0e492e;
+  align-self: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  border-radius: 10% 5%;
+}
+/*  .Recipes ul {
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+    column-count: 4;
+  }
+  .Recipes ul li {
+    display: inline-block;
+    padding: 5px;
+  }
+  .pictureR {
+    width: 50%;
+    height: 50%;
+    border-radius: 10% 20%;
+    align-self: center;
+  }
+  .AllRecipes {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }*/

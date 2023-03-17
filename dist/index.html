@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Indie+Flower"
+      rel="stylesheet"
+    />
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!--Import materialize.css-->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="materialize.min.css"
+      media="screen,projection"
+    />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <input type="text" id="cityName-input" />
+        <button id="search" , class="waves-effect waves-light btn-large">
+          <i class="material-icons left">search</i>search
+        </button>
+      </div>
+      <div class="AllCitiesWheather"></div>
+    </div>
+    <script id="citieaData-template" type="text/x-handlebars-template">
+      {{#each DataRE}}
+        <div class="cities">
+          <p id="cityName">cityName</p>
+          <button id="save" , class="waves-effect waves-light btn-large"><i
+              class="material-icons right"
+            >save</i>save</button>
+          <button id="delete" class="waves-effect waves-light btn"><i
+              class="material-icons right"
+            >delete</i>delete</button>
+
+        </div>
+
+      {{/each}}
+    </script>
+
+    <script src="Renderer.js"></script>
+    <script src="APIWeatherManager.js"></script>
+    <script src="main.js"></script>
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="materialize.min.js"></script>
+  </body>
+</html>
