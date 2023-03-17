@@ -44,14 +44,26 @@
     </div>
     <script id="citieaData-template" type="text/x-handlebars-template">
       {{#each DataRE}}
-        <div class="cities">
-          <p id="cityName">cityName</p>
-          <button id="save" , class="waves-effect waves-light btn-large"><i
-              class="material-icons right"
-            >save</i>save</button>
-          <button id="delete" class="waves-effect waves-light btn"><i
-              class="material-icons right"
-            >delete</i>delete</button>
+        <div class="row">
+          <div class="col s12 m6 l6">
+            <div class="card blue darken-1">
+              <div class="card-content white-text">
+                <span class="car-title">{{name}}</span>
+                <i class="material-icons left">wb_sunny</i>
+                <p>{{temperature}} &deg;C</p>
+              </div>
+              <div class="card-action">
+                <a
+                  id="save"
+                  class="btn-floating btn-large waves-effect waves-light btn red"
+                ><i class="material-icons">add</i></a>
+                <a
+                  id="delete"
+                  class="btn-floating btn-large waves-effect waves-light btn blue"
+                ><i class="material-icons">remove</i></a>
+              </div>
+            </div>
+          </div>
 
         </div>
 

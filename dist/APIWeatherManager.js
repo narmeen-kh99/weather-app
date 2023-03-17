@@ -9,9 +9,9 @@ class APIManager {
   getCitiesWeather() {
     console.log("i am here 1");
     return $.get(`http://localhost:4200/city`).then((result) => {
-      console.log(result.res);
-      this.data.push(result.res);
-      render.RenderWeatherData(result.res);
+      console.log(result);
+      this.data.push(result);
+      render.RenderWeatherData(result);
     });
   }
   getCityWeather() {

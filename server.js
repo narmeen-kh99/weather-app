@@ -5,8 +5,8 @@ const bodyParser = require("body-parser");
 const weather = require("./model/weather");
 const app = express();
 const port = 4200;
-//var cors = require("cors");
-//app.use(cors());
+var cors = require("cors");
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
