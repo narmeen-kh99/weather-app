@@ -41,7 +41,7 @@ api.post("/city", function (req, res) {
 
 api.delete("/delete/:cityName", function (req, res) {
   weather.findOneAndRemove({ name: req.params.cityName }).then(function (city) {
-    res.send(`the cite ${city.name} deleted`);
+    res.send(`the city deleted`);
   });
 });
 FilterData = function (citiesData) {
@@ -49,6 +49,8 @@ FilterData = function (citiesData) {
   newCity["name"] = citiesData.name;
   newCity["temperature"] = citiesData.main.temp;
   newCity["condition"] = citiesData.weather[0].description;
-  newCity["conditionPic"] = citiesData.weather[0].icon;
+  newCity[
+    "conditionPic"
+  ] = `https://openweathermap.org/img/wn/${citiesData.weather[0].icon}@2x.png`;
   return newCity;
 };

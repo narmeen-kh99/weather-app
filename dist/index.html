@@ -44,27 +44,51 @@
           <i class="material-icons left">search</i>search
         </button>
       </div>
-      <div class="AllCitiesWheather"></div>
+        <div class="DBData"></div>
+        <div class="unSaved"></div>
+
+      </div>
     </div>
-    <script id="citieaData-template" type="text/x-handlebars-template">
+    <script id="dataBD-template" type="text/x-handlebars-template">
       {{#each DataRE}}
         <div class="row">
           <div class="col s12 m6 l6">
             <div class="card cyan darken-2 z-depth-5">
               <div class="card-content white-text">
-                <span class="car-title">{{name}}</span>
-                <i class="material-icons left">wb_sunny</i>
+                <h1 class="card-title">{{name}}</h1>
+                <img  src="{{conditionPic}}" />
                 <p>{{temperature}} &deg;C</p>
+                <span class="card-title">{{condition}}</span>
+                <button
+                  id="delete"
+                  class="btn-floating-minus btn-large waves-effect waves-light btn cyan accent-4"
+                ><i class="material-icons">remove</i></button>
               </div>
               <div class="card-action">
-                <a
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      {{/each}}
+    </script>
+    <script id="unsavedData-template" type="text/x-handlebars-template">
+      {{#each DataRE}}
+        <div class="row">
+          <div class="col s12 m6 l6">
+            <div class="card cyan darken-2 z-depth-5">
+              <div class="card-content white-text">
+                <h1 class="card-title">{{name}}</h1>
+                <img  src="{{conditionPic}}" />
+                <p>{{temperature}} &deg;C</p>
+                <span class="card-title">{{condition}}</span>
+                <button
                   id="save"
-                  class="btn-floating btn-large waves-effect waves-light btn red"
-                ><i class="material-icons">add</i></a>
-                <a
-                  id="delete"
-                  class="btn-floating btn-large waves-effect waves-light btn cyan accent-4"
-                ><i class="material-icons">remove</i></a>
+                  class="btn-floating-pluse btn-large waves-effect waves-light btn red"
+                ><i class="material-icons">add</i></button>
+              </div>
+              <div class="card-action">
               </div>
             </div>
           </div>
